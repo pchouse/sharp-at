@@ -1,0 +1,6 @@
+@sharp_at_qr_code_api_HostAddress = http://localhost:5207
+
+GET {{sharp_at_qr_code_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

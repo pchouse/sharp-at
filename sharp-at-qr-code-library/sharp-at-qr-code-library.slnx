@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/sharp-at-qr-code-library.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/sharp-at-qr-code-library-test.csproj" />
+  </Folder>
+</Solution>

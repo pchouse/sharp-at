@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PChouse.AT.QRCode.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../sharp-at-qr-code-library/src/sharp-at-qr-code-library.csproj" />
+    <ProjectReference Include="../../sharp-at-qr-code/src/sharp-at-qr-code.csproj" />
+    <ProjectReference Include="../../sharp-at-qr-code-api-library/src/sharp-at-qr-code-api-library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.10" />
+    <PackageReference Include="NLog" Version="6.1.4" />
+    <PackageReference Include="NLog.Database" Version="6.0.3" />
+    <PackageReference Include="NLog.Web" Version="6.1.4" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+</Project>

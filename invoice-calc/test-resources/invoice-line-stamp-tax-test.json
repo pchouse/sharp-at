@@ -1,0 +1,221 @@
+[
+  {
+    "testDescribe": "Invoice line one line stamp tax percent not included without discounts",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "Stamp": {
+              "type": "PERCENT",
+              "tax": 23.00
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100,
+          "totalAmount": 100,
+          "netPrice": 100,
+          "settlementAmount": 0,
+          "total": 100,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 100.00,
+      "totalAmount": 123.00,
+      "taxAmount": 23.00,
+      "taxableAmount": 100.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 123.00,
+      "taxPayable": 23.00,
+      "netTotal": 100.00,
+      "totalVat": 0.00,
+      "totalStamp": 23.00,
+      "vatRateTotals": [],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice line one line stamp tax percent included without discounts",
+    "vatIncluded": true,
+    "totalScale": 2,
+    "discount": {
+      "type": "VALUE",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 123.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "Stamp": {
+              "type": "PERCENT",
+              "tax": 23.00
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 123,
+          "totalAmount": 123,
+          "netPrice": 100,
+          "settlementAmount": 0,
+          "total": 100,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 123.00,
+      "totalAmount": 123.00,
+      "taxAmount": 23.00,
+      "taxableAmount": 100.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 123.00,
+      "taxPayable": 23.00,
+      "netTotal": 100.00,
+      "totalVat": 0.00,
+      "totalStamp": 23.00,
+      "vatRateTotals": [],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice line one line stamp tax fixed not included without discounts",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "Stamp": {
+              "type": "FIXED",
+              "tax": 23.00
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100,
+          "totalAmount": 100,
+          "netPrice": 100,
+          "settlementAmount": 0,
+          "total": 100,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 100.00,
+      "totalAmount": 123.00,
+      "taxAmount": 23.00,
+      "taxableAmount": 100.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 123.00,
+      "taxPayable": 23.00,
+      "netTotal": 100.00,
+      "totalVat": 0.00,
+      "totalStamp": 23.00,
+      "vatRateTotals": [],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice line one line stamp tax fixed included without discounts",
+    "vatIncluded": true,
+    "totalScale": 2,
+    "discount": {
+      "type": "VALUE",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 123.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "Stamp": {
+              "type": "FIXED",
+              "tax": 23.00
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 123,
+          "totalAmount": 123,
+          "netPrice": 100,
+          "settlementAmount": 0,
+          "total": 100,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 123.00,
+      "totalAmount": 123.00,
+      "taxAmount": 23.00,
+      "taxableAmount": 100.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 123.00,
+      "taxPayable": 23.00,
+      "netTotal": 100.00,
+      "totalVat": 0.00,
+      "totalStamp": 23.00,
+      "vatRateTotals": [],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  }
+]

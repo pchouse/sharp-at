@@ -1,0 +1,397 @@
+[
+  {
+    "testDescribe": "Invoice one line with head percent discount vat not included",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 9.99
+    },
+    "currencyRate": 1,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100.00,
+          "totalAmount": 100.00,
+          "netPrice": 90.01,
+          "settlementAmount": 9.99,
+          "total": 90.01,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 100.00,
+      "totalAmount": 110.71,
+      "taxAmount": 20.7,
+      "taxableAmount": 90.01,
+      "totalHeadDiscount": 9.99,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 9.99,
+      "grossTotal": 110.71,
+      "taxPayable": 20.7,
+      "netTotal": 90.01,
+      "totalVat": 20.7,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 90.01,
+          "taxValueAmount": 20.7,
+          "baseTaxable": 90.01,
+          "taxValue": 20.7
+        }
+      ],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice one line with head percent discount vat included",
+    "vatIncluded": true,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 9.99
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 123.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 123.00,
+          "totalAmount": 123.00,
+          "netPrice": 90.01,
+          "settlementAmount": 9.99,
+          "total": 90.01,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 123.00,
+      "totalAmount": 110.71,
+      "taxAmount": 20.70,
+      "taxableAmount": 90.01,
+      "totalHeadDiscount": 12.29,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 12.29,
+      "grossTotal": 110.71,
+      "taxPayable": 20.70,
+      "netTotal": 90.01,
+      "totalVat": 20.70,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 90.01,
+          "taxValueAmount": 20.70,
+          "baseTaxable": 90.01,
+          "taxValue": 20.70
+        }
+      ],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice one line with head value discount vat not included",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "VALUE",
+      "discount": 9.99
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100.00,
+          "totalAmount": 100.00,
+          "netPrice": 90.01,
+          "settlementAmount": 9.99,
+          "total": 90.01,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 100.00,
+      "totalAmount": 110.71,
+      "taxAmount": 20.7,
+      "taxableAmount": 90.01,
+      "totalHeadDiscount": 9.99,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 9.99,
+      "grossTotal": 110.71,
+      "taxPayable": 20.7,
+      "netTotal": 90.01,
+      "totalVat": 20.7,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 90.01,
+          "taxValueAmount": 20.7,
+          "baseTaxable": 90.01,
+          "taxValue": 20.7
+        }
+      ],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice one line with head value discount vat included",
+    "vatIncluded": true,
+    "totalScale": 2,
+    "discount": {
+      "type": "VALUE",
+      "discount": 9.99
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 123.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 123.00,
+          "totalAmount": 123.00,
+          "netPrice": 91.8780,
+          "settlementAmount": 8.1219,
+          "total": 91.88,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 123.00,
+      "totalAmount": 113.01,
+      "taxAmount": 21.13,
+      "taxableAmount": 91.88,
+      "totalHeadDiscount": 9.99,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 9.99,
+      "grossTotal": 113.01,
+      "taxPayable": 21.13,
+      "netTotal": 91.88,
+      "totalVat": 21.13,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 91.88,
+          "taxValueAmount": 21.13,
+          "baseTaxable": 91.88,
+          "taxValue": 21.13
+        }
+      ],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  },
+  {
+    "testDescribe": "Invoice multiple lines with head value discount vat not included",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "VALUE",
+      "discount": 150.00
+    },
+    "currencyRate": 1,
+    "withholdingTax": null,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 200.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 200.00,
+          "totalAmount": 200.00,
+          "netPrice": 100.00,
+          "settlementAmount": 100.00,
+          "total": 100.00,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      },
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [
+            {
+              "type": "PERCENT",
+              "discount": 0.00
+            }
+          ],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100.00,
+          "totalAmount": 100.00,
+          "netPrice": 50.00,
+          "settlementAmount": 50.00,
+          "total": 50.00,
+          "withholdingTax": 0.0,
+          "withholdingTaxAmount": 0.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 300.00,
+      "totalAmount": 184.5,
+      "taxAmount": 34.5,
+      "taxableAmount": 150.00,
+      "totalHeadDiscount": 150.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 150.0,
+      "grossTotal": 184.5,
+      "taxPayable": 34.5,
+      "netTotal": 150.0,
+      "totalVat": 34.5,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 150.00,
+          "taxValueAmount": 34.5,
+          "baseTaxable": 150.00,
+          "taxValue": 34.5
+        }
+      ],
+      "withholdingTax": 0.0,
+      "withholdingTaxAmount": 0.0
+    }
+  }
+]

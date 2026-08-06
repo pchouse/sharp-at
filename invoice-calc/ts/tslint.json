@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "interface-name": false,
+    "jest/valid-expect": [
+      "error",
+      {
+        "maxArgs": 2
+      }
+    ]
+  }
+}

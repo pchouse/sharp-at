@@ -1,0 +1,265 @@
+[
+  {
+    "testDescribe": "Basic invoice with withholding tax",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 2,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": 10.0
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 200,
+          "totalAmount": 200,
+          "netPrice": 100.0,
+          "settlementAmount": 0,
+          "total": 200,
+          "withholdingTax": 20.00,
+          "withholdingTaxAmount": 20.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 200.00,
+      "totalAmount": 246.00,
+      "taxAmount": 46.00,
+      "taxableAmount": 200.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 246.00,
+      "taxPayable": 46.00,
+      "netTotal": 200.00,
+      "totalVat": 46.00,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 200.00,
+          "taxValueAmount": 46.00,
+          "baseTaxable": 200.00,
+          "taxValue": 46.00
+        }
+      ],
+      "withholdingTax": 20.0,
+      "withholdingTaxAmount": 20.0
+    }
+  },
+  {
+    "testDescribe": "Invoice with withholding tax, currency rate",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 0
+    },
+    "currencyRate": 1.15,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": 10.0
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100,
+          "totalAmount": 100,
+          "netPrice": 115.0,
+          "settlementAmount": 0,
+          "total": 115.0,
+          "withholdingTax": 11.5,
+          "withholdingTaxAmount": 10.0
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 100.00,
+      "totalAmount": 123.00,
+      "taxAmount": 23.00,
+      "taxableAmount": 100.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 141.45,
+      "taxPayable": 26.45,
+      "netTotal": 115.00,
+      "totalVat": 23.00,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 100.00,
+          "taxValueAmount": 23.00,
+          "baseTaxable": 115.00,
+          "taxValue": 26.45
+        }
+      ],
+      "withholdingTax": 11.5,
+      "withholdingTaxAmount": 10.0
+    }
+  },
+  {
+    "testDescribe": "Basic invoice with withholding tax multiple line",
+    "vatIncluded": false,
+    "totalScale": 2,
+    "discount": {
+      "type": "PERCENT",
+      "discount": 0
+    },
+    "currencyRate": 1,
+    "totalAdjustment": 0,
+    "lines": [
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 2,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": 10.0
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 200,
+          "totalAmount": 200,
+          "netPrice": 100.0,
+          "settlementAmount": 0,
+          "total": 200,
+          "withholdingTax": 20.00,
+          "withholdingTaxAmount": 20.0
+        }
+      },
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1,
+          "vat": {
+            "VatRate": {
+              "vatType": "NOR",
+              "vatZone": "PT",
+              "tax": 23.00,
+              "taxExemptionCode": null
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": null
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 100,
+          "totalAmount": 100,
+          "netPrice": 100.0,
+          "settlementAmount": 0,
+          "total": 100,
+          "withholdingTax": 0.00,
+          "withholdingTaxAmount": 0.0
+        }
+      },
+      {
+        "invoiceLineTest": {
+          "unitPrice": 100.00,
+          "unitPriceScale": 2,
+          "quantity": 1.5,
+          "vat": {
+            "VatRate": {
+              "vatType": "ISE",
+              "vatZone": "PT",
+              "tax": 0.00,
+              "taxExemptionCode": "M99"
+            }
+          },
+          "discounts": [],
+          "withholdingTaxRate": 5.0
+        },
+        "invoiceLineTestResult": {
+          "baseTotalAmount": 150,
+          "totalAmount": 150,
+          "netPrice": 100.0,
+          "settlementAmount": 0,
+          "total": 150,
+          "withholdingTax": 7.5,
+          "withholdingTaxAmount": 7.5
+        }
+      }
+    ],
+    "invoiceTestResult": {
+      "baseTotal": 450.00,
+      "totalAmount": 519.00,
+      "taxAmount": 69.00,
+      "taxableAmount": 450.00,
+      "totalHeadDiscount": 0.0,
+      "totalLinesDiscount": 0.0,
+      "totalDiscount": 0.0,
+      "grossTotal": 519.00,
+      "taxPayable": 69.00,
+      "netTotal": 450.00,
+      "totalVat": 69.00,
+      "totalStamp": 0.00,
+      "vatRateTotals": [
+        {
+          "type": "NOR",
+          "zone": "PT",
+          "tax": 23.00,
+          "taxExemptionCode": null,
+          "baseTaxableAmount": 300.00,
+          "taxValueAmount": 69.00,
+          "baseTaxable": 300.00,
+          "taxValue": 69.00
+        },
+        {
+          "type": "ISE",
+          "zone": "PT",
+          "tax": 0.00,
+          "taxExemptionCode": "M99",
+          "baseTaxableAmount": 150.00,
+          "taxValueAmount": 0.00,
+          "baseTaxable": 150.00,
+          "taxValue": 0.00
+        }
+      ],
+      "withholdingTax": 27.5,
+      "withholdingTaxAmount": 27.5
+    }
+  }
+]
