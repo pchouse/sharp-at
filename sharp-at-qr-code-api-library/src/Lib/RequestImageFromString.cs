@@ -10,12 +10,21 @@ using PChouse.AT.QRCode.Library;
 
 namespace PChouse.AT.QRCode.API.Library;
 
+/// <summary>
+/// Request the QRCode image from the string
+/// </summary>
 public record RequestImageFromString
 {
 
+    /// <summary>
+    /// The QRCode string
+    /// </summary>
     [JsonPropertyName(nameof(QRCode))]
     public required string QRCode { get; set; }
 
+    /// <summary>
+    /// Image options
+    /// </summary>
     [JsonPropertyName(nameof(ImageOptions))]
     public required ImageOptions ImageOptions { get; set; }
 

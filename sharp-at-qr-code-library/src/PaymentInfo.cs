@@ -12,7 +12,7 @@ using PChouse.AT.Generics;
 namespace PChouse.AT.QRCode.Library;
 
 /// <summary>
-/// Iban information for QR code other info field 
+/// Information for QR code other info field 
 /// </summary>
 public record PaymentInfo : IOtherInfo
 {

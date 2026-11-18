@@ -33,3 +33,10 @@ sharp-utils/src/bin/*
 sharp-utils/test/bin/*
 sharp-utils/src/obj/*
 sharp-utils/test/obj/*
+
+**/bin/
+**/obj/
+**/TestResults/
+**/.vs/
+**/.idea/
+**/node_modules/

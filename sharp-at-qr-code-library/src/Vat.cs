@@ -35,7 +35,7 @@ public record Vat
     /// Fields: I3, J3, K3
     /// VAT tax base at reduced rate < br >
     /// Total value of the tax base subject to the reduced VAT rate.
-    /// @param float $value Total value of the tax base
+    /// <para>Total value of the tax base subject to the reduced VAT rate.</para>
     /// </summary>
     [JsonPropertyName(nameof(ReducedBaseVat))]
     [Field(Position = 2, Fields = ["I3", "J3", "K3"], MaximLength = 16, IsMandatory = false)]

@@ -46,7 +46,7 @@ public record ImageOptions
     /// <summary>
     /// The image type to be generated
     /// </summary>
-    [JsonPropertyName(nameof(ImageType))]
+    [JsonPropertyName(nameof(ImageType))]    
     public required ImageType ImageType { get; set; }
 
 }

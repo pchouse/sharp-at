@@ -98,7 +98,7 @@ public abstract record ADocument
     /// <summary>
     /// Field: L
     /// <para>Not subject / non-taxable in VAT(IVA)</para>
-    /// <para>Total value related to non - subject / non - taxable transactions in VAT.</para>
+    /// <para>Total value related to non subject / nontaxable transactions in VAT.</para>
     /// </summary>
     [JsonPropertyName(nameof(TotalNonVat))]
     [Field(Position = 9, Fields = ["L"], MaximLength = 16, IsMandatory = false)]

@@ -33,7 +33,7 @@ public class QRCodeController(
     private ILogger _logger = logger;
 
     /// <summary>
-    /// Require QRCode string
+    /// Request QRCode string
     /// </summary>
     /// <param name="request"></param>
     /// <returns></returns>
@@ -178,6 +178,19 @@ public class QRCodeController(
     public async Task<ActionResult<Document>> ParseStringToDocument([FromBody] RequestFromString request)
     {
         return parser.Parse(request.QRCode);
+    }
+
+    /// <summary>
+    /// Service health check
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("HealthCheck")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ErrorResponse))]
+    public ActionResult<string> HealthCheck()
+    {
+        return $"Ok => From {HttpContext.Connection.RemoteIpAddress}";
     }
 
 }
